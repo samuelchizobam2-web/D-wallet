@@ -1,127 +1,118 @@
-.balance-card{
-    width: 300px;
-    padding: 25px;
-    margin: 30px auto;
-    background: #0d47a1;
-    color: white;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 15px;
-    
-}
-.balance-card p{
-    margin: 0;
-    font-size: 16px;
-}
-.balance-card h2{
-    font-size: 32px;
-    margin: 10px 0 0;
-}
-*{
-    box-sizing: border-box;
+/* =========================
+   GENERAL PAGE
+========================= */
 
+* {
+    box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 25px 15px;
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
     background: #f4f6f9;
     color: #222;
     text-align: center;
-    
 }
-h1{
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
     margin-bottom: 5px;
     font-size: 32px;
 }
-body>h2{
+
+body > h2 {
     margin-top: 0;
     margin-bottom: 25px;
     font-size: 18px;
     font-weight: normal;
     color: #666;
 }
-#sendMoneyBtn{
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: white;
-    color: #0d47a1;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
-#sendMoneyBtn{
-    opacity: 0.85;
-}
-#sendForm{
-    margin-top: 20px;
-    padding: 20px;
-    background: #f5f7fa;
-    border-radius: 12px;
-}
-#sendForm h3{
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #222;
-}
-#sendForm input{
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-#sendForm input:focus{
-    outline: none;
-    border-color: #0d47a1;
-}
-#transferBtn{
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
+
+
+/* =========================
+   BALANCE CARD
+========================= */
+
+.balance-card {
+    width: 300px;
+    padding: 25px;
+    margin: 30px auto;
+
     background: #0d47a1;
     color: white;
+
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.balance-card p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.balance-card h2 {
+    font-size: 32px;
+    margin: 10px 0 0;
+}
+
+
+/* =========================
+   SEND MONEY BUTTON
+========================= */
+
+#sendMoneyBtn {
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: white;
+    color: #0d47a1;
+
     font-size: 15px;
     font-weight: bold;
+
     cursor: pointer;
 }
-body>h3{
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    text-align: left;
+
+#sendMoneyBtn:hover {
+    opacity: 0.85;
 }
-#transactionHistory{
-    width: 100%;
-    max-width: 350px;
-    background: white;
+
+
+/* =========================
+   SEND MONEY FORM
+========================= */
+
+#sendForm {
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #f5f7fa;
+
     border-radius: 12px;
-    padding: 18px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 12px;
-    rgba(0, 0, 0 ,0.08)
-    text-align: left;
 }
-#transactionHistory p{
-    
-    color: #777;
-    text-align: center;
+
+#sendForm h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #222;
 }
-@media (max-width: 500px){
-    body{
-        padding: 20px 10px;
-    }
-    .balance-card{
-        width: 100%;
-        max-width: 300px;
-        padding: 20px;
-    }
-    #balance {
-        font-size: 30px;
-    }
-}
+
+#sendForm input {
+    width: 100%;
+
+    padding: 12px;
+    margin-bottom: 12px;
+
+    border:
