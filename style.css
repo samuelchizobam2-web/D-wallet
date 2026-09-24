@@ -1,33 +1,50 @@
-body{
-    background-color: cyan;
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-div2{
-    padding-left: 20px;
-    padding-right: 80px;
-    font-size: 20px;
-    border-radius: 50px;
-    height: 20px;
-    text-align: right;
-    display: block;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: cyan;
+    font-family: Arial, sans-serif;
 }
 
 
 /* =========================
-   LOGIN + CONTACT BUTTONS
+   TOP BUTTON AREA
 ========================= */
 
-.click{
+div2 {
+    display: block;
+    width: 100%;
+    padding: 10px 75px 10px 10px;
+    font-size: 20px;
+    text-align: right;
+    height: auto;
+}
+
+.click {
     border-radius: 50px;
-    height: 50px;  
-    width: 100px;  
-    cursor: pointer;  
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
     transition: 0.5s;
     color: gold;
     background-color: black;
+    border: none;
 }
 
-.click:hover{
+.click:hover {
     opacity: 0.5;
 }
 
@@ -36,7 +53,7 @@ div2{
    GRID MENU
 ========================= */
 
-.grid-button{
+.grid-button {
     width: 50px;
     height: 50px;
     border: none;
@@ -51,7 +68,7 @@ div2{
     align-content: center;
 
     cursor: pointer;
-     
+
     position: fixed;
     top: 10px;
     right: 20px;
@@ -59,7 +76,7 @@ div2{
     z-index: 1000;
 }
 
-.grid-button span{
+.grid-button span {
     width: 6px;
     height: 6px;
     background: white;
@@ -67,14 +84,11 @@ div2{
     display: block;
 }
 
-
-/* Remove the normal Details arrow */
-
-summary.grid-button{
+summary.grid-button {
     list-style: none;
 }
 
-summary.grid-button::-webkit-details-marker{
+summary.grid-button::-webkit-details-marker {
     display: none;
 }
 
@@ -83,10 +97,10 @@ summary.grid-button::-webkit-details-marker{
    MENU OPTIONS
 ========================= */
 
-.options{
-    position: absolute;
-    top: 50px;
-    right: 0px;
+.options {
+    position: fixed;
+    top: 65px;
+    right: 20px;
 
     width: 180px;
     padding: 8px;
@@ -99,12 +113,22 @@ summary.grid-button::-webkit-details-marker{
 .options a {
     display: block;
     padding: 10px;
+
     text-decoration: none;
     color: orange;
 }
 
-.options a:hover{
+.options a:hover {
     background: #eee;
+}
+
+
+/* =========================
+   REMOVE EXTRA BR SPACE
+========================= */
+
+body > br {
+    display: none;
 }
 
 
@@ -112,24 +136,26 @@ summary.grid-button::-webkit-details-marker{
    WELCOME SECTION
 ========================= */
 
-.welcome{
+.welcome {
     position: relative;
+
+    width: 100%;
     height: 300px;
+
+    margin-top: 30px;
 
     overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    top: 50px;
 }
 
+.welcome video {
+    position: absolute;
 
-/* KEEP VIDEO LIKE YOUR ORIGINAL */
-
-.welcome video{
-    position: relative;
+    top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
@@ -144,37 +170,84 @@ summary.grid-button::-webkit-details-marker{
    WELCOME TEXT
 ========================= */
 
-.content{
+.content {
     position: absolute;
-font-size: 32px;
+
     z-index: 1;
 
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 95%;
+
     color: gold;
+
     text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    text-shadow: 2px 2px 4px black;
 }
+
+.content h1 {
+    margin: 0;
+
+    font-size: clamp(32px, 6vw, 60px);
+
+    line-height: 1.1;
+}
+
+.content p {
+    margin: 15px 0 0;
+
+    font-size: clamp(18px, 3vw, 30px);
+
+    line-height: 1.2;
+}
+
+
 /* =========================
-   RESTORE LOGIN BOX DESIGN
+   LOGIN OVERLAY
 ========================= */
 
 .overlay {
     display: none;
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.5);
+
     justify-content: center;
     align-items: center;
+
     z-index: 9999;
 }
 
+
+/* =========================
+   LOGIN BOX
+========================= */
+
 .login-box {
     background: rgb(103, 73, 211);
+
     width: 380px;
+    max-width: 90%;
+
     padding: 30px;
+
     border-radius: 15px;
+
     text-align: center;
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -185,22 +258,19 @@ font-size: 32px;
 
 .login-box input {
     width: 100%;
+
     padding: 12px;
     margin: 8px 0;
+
     border: 1px solid #ccc;
     border-radius: 8px;
+
     box-sizing: border-box;
 }
 
 .login-box button {
     padding: 10px 18px;
-    margin: 10px 5px 0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
 
-#loginMessage {
-    margin: 8px 0;
-    font-size: 14px;
-}
+    margin: 10px 5px 0;
+
+    border: none;}
