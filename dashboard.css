@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 25px 15px;
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
+   background: linear-gradient(135deg, #eef3ff, #f8f9ff, #e8ff);
     color: #222;
     text-align: center;
 }
@@ -115,4 +115,174 @@ body > h2 {
     padding: 12px;
     margin-bottom: 12px;
 
-    border:
+    border: none;
+}
+#addMoneyBtn{
+    margin-top: 20px;
+    margin-right: 8px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#addMoneyBtn:hover{
+    opacity: 0.85;
+
+}
+#toggleBalanceBtn{
+    margin-left: 8px;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(225, 225, 225, 0.18);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+#toggleBalanceBtn:hover{
+    background: rgba(225,225,225,0.35);
+}
+#balance{
+    display: inline-block;
+    margin: 10px 0 0;
+    font-size: 32px;
+    vertical-align: middle;
+}
+#addMoneyBtn,
+#sendMoneyBtn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 110px;
+    height: 43px;
+    margin: 20px 3px 0;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#addMoneyBtn{
+    background: #4caf50;
+    color: white;
+}
+#sendMoneyBtn{
+    background: white;
+    color: #0d47a1;
+}
+#addMoneyBtn:hover,
+#sendMoneyBtn:hover {
+    opacity: 0.85;
+}
+@media (max-width: 500px) {
+    #addMoneyBtn,
+    #sendMoneyBtn {
+        width: 115px;
+        height: 43px;
+        font-size: 13px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+#transferBtn{
+    width: 100%;
+    height: 45px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg #0d47a1 #19762d);
+    color: indigo;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(13, 71, 161, 0.3);
+    transition: 0.2s ease;
+}
+#transferBtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(13, 71, 161, 0.4);
+}
+#returnBtn{
+    width: 100%;
+    height: 42px;
+    padding: 0;
+    margin-bottom: 15px;
+    border: 1px solid #0d47de;
+    background: white;
+    color: indigo;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+#returnBtn:hover {
+    background: #f0f3f7;
+    transform: translateY(-1px);
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: -120px;
+    left: -120px;
+    width: 280px;
+    height: 280px;
+    background: rgba(25, 118, 210, 0.12);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -120px;
+    right: -120px;
+    width: 280px;
+    height: 280px;
+    background: rgba(76, 175, 80, 0.10);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+}
+/* Transaction History */
+#transactionHistory {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+/* Each transaction */
+#transactionHistory p {
+    margin: 0;
+    padding: 15px 5px;
+    color: #222;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Lines between transactions */
+#transactionHistory p + p {
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Transaction date */
+#transactionHistory small {
+    display: block;
+    margin-top: 6px;
+    color: #888;
+    font-size: 12px;
+    font-weight: normal;
+}

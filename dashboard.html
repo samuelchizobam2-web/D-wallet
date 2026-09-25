@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Wallet Dashboard</title>
+    <title>Vaulta Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <h1>D-wallet</h1>
+    <h1>Vaulta</h1>
     <h2>Welcome to your Dashboard</h2>
     <div class="balance-card">
         <p>Available Balance</p>
         <h2 id="balance">₦0.00</h2>
+        <button id="toggleBalanceBtn">👁️</button>
+        <button id="addMoneyBtn">Add Money</button>
     <button id="sendMoneyBtn">Send Money</button>
     <div id="sendForm" style="display: none;">
         <h3>Send Money</h3>
+        
         <input type="number" id="recipient" placeholder="Recipient account number" >
         <input type="number" id="amount" placeholder="Amount">
         <button id="transferBtn">Transfer</button>
+        <button id="returnBtn">Return</button>
     </div>
     
     
